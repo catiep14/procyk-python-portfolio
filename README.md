@@ -23,7 +23,3 @@ This project applies **tidy data principles** to clean, transform, and visualize
 - Demonstrates **data wrangling & preprocessing** using `pandas`  
 - Showcases **data visualization** skills with `matplotlib` & `seaborn`  
 - Implements **interactive web apps** with `Streamlit`  
-
-### 📊 [Your First Project Title](https://github.com/yourusername/First-Project)  
-**Description:**  
-(Provide a brief description of your first project, its goals, technologies used, and key takeaways.)  
