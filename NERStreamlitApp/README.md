@@ -93,7 +93,7 @@ We use `EntityRuler` from spaCy to match exact terms defined in your custom dict
 
 ## 🌐 Deployed Version
 
-> Coming soon: [NERStreamlitApp/streamlitapp.py](#)
+> Coming soon: [harrypotterner.streamlit.app](#)
 
 ---
 
