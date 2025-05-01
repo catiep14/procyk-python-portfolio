@@ -4,7 +4,7 @@ from spacy.pipeline import EntityRuler
 from spacy import displacy
 import pandas as pd
 
-# 🎨 Styling
+# Colors 
 st.markdown("""
     <style>
     .stApp { background-color: #fef9f4; font-family: 'Helvetica', sans-serif; }
@@ -41,13 +41,13 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# ⚙️ spaCy setup
+#spaCy setup
 nlp = spacy.blank("en")
 if "ruler" not in nlp.pipe_names:
     nlp.add_pipe("entity_ruler")
 ruler = nlp.get_pipe("entity_ruler")
 
-# 🧙‍♂️ Predefined Harry Potter NER patterns
+#Harry Potter NER patterns
 harry_potter_patterns = {
     "CHARACTER": ["Harry Potter", "Hermione Granger", "Ron Weasley", "Albus Dumbledore", "Severus Snape"],
     "HOUSE": ["Gryffindor", "Slytherin", "Ravenclaw", "Hufflepuff"],
@@ -57,7 +57,7 @@ harry_potter_patterns = {
     "OBJECT": ["Invisibility Cloak", "Marauder’s Map", "Horcrux", "Time-Turner"]
 }
 
-# 🧠 Title and sidebar
+#Title and sidebar
 st.title("🧙 Custom NER: Harry Potter Edition")
 st.sidebar.header("🔮 Choose Entity Types")
 
@@ -73,7 +73,7 @@ for label in selected_labels:
     patterns = [{"label": label, "pattern": name} for name in harry_potter_patterns[label]]
     ruler.add_patterns(patterns)
 
-# 📄 Text input
+# Text input
 st.subheader("📝 Input Text")
 sample_text = (
     "Harry Potter and Hermione Granger used the Marauder’s Map to find their way around Hogwarts. "
@@ -94,7 +94,7 @@ else:
     else:
         text = ""
 
-# 🧠 Process and Display
+# Process and Display
 if text:
     doc = nlp(text)
     st.subheader("✨ Detected Entities")
@@ -103,7 +103,7 @@ if text:
         unsafe_allow_html=True
     )
 
-    # 📊 Entity list
+    # Entity list
     ents_data = [{"Text": ent.text, "Label": ent.label_} for ent in doc.ents]
     if ents_data:
         st.subheader("📋 Entity Summary")
