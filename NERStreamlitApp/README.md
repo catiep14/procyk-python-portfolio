@@ -34,7 +34,7 @@ Clone this repo and run:
 streamlit run streamlitapp.py
 ```
 
-> Make sure you're using Python 3.7 or higher.
+> Make sure you're using Python 3.7 environment or higher
 
 ---
 
@@ -46,7 +46,7 @@ streamlit run streamlitapp.py
 - Upload a `.txt` file
 
 ### 🧙 Custom Entity Labels
-Choose from predefined Harry Potter patterns like:
+You pick from predefined Harry Potter patterns like:
 
 - `CHARACTER`: `Harry Potter`, `Hermione Granger`, `Ron Weasley`
 - `SPELL`: `Expelliarmus`, `Avada Kedavra`, `Wingardium Leviosa`
@@ -74,25 +74,26 @@ We use `EntityRuler` from spaCy to match exact terms defined in your custom dict
 
 ## 📸 Visual Examples
 
-> Add screenshots like the following to your `images/` folder and link them here.
-
 **App Interface**
 
-![App Interface](images/app_interface.png)
+![App Interface](<img width="1164" alt="Screenshot 2025-04-14 at 1 41 16 PM" src="https://github.com/user-attachments/assets/ab786cb1-b835-4f9b-a241-b851c13aee2e" />
+)
 
 **Detected Entities Highlighted**
 
-![Entities Highlighted](images/entities_output.png)
+![Entities Highlighted](<img width="750" alt="Screenshot 2025-04-14 at 7 38 15 PM" src="https://github.com/user-attachments/assets/dc4837d8-d293-4ba1-aa6f-f083e4435ba7" />
+)
 
 **Sidebar with Label Selection**
 
-![Sidebar](images/sidebar_options.png)
+![Sidebar](<img width="320" alt="Screenshot 2025-04-14 at 7 37 03 PM" src="https://github.com/user-attachments/assets/0f6fba06-0909-4f2b-ab31-dee72478279a" />
+)
 
 ---
 
 ## 🌐 Deployed Version
 
-> Coming soon: [Link to deployed app here](#)
+> Coming soon: [harrypotterner.streamlit.app](#)
 
 ---
 
