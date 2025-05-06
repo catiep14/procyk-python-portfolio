@@ -11,6 +11,8 @@ from sklearn.metrics import classification_report
 import string
 import re
 import random
+import os
+
 
 st.set_page_config(page_title="Fake News Analyzer", layout="wide")
 
@@ -78,6 +80,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 tab = st.sidebar.radio("Choose Activity", ["📊 Explore Data", "🤖 Train & Predict", "📝 Try Your Own"])
+
+import os
+st.write("Current working directory:", os.getcwd())
+st.write("Files in current directory:", os.listdir())
 
 df = load_data()
 
