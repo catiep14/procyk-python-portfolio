@@ -86,10 +86,6 @@ st.markdown("""
 
 tab = st.sidebar.radio("Choose Activity", ["📊 Explore Data", "🤖 Train & Predict", "📝 Try Your Own"])
 
-import os
-st.write("Current working directory:", os.getcwd())
-st.write("Files in current directory:", os.listdir())
-
 df = load_data()
 
 if tab == "📊 Explore Data":
