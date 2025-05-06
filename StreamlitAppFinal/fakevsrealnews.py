@@ -23,30 +23,6 @@ st.set_page_config(page_title="Fake News Analyzer", layout="wide")
 
 st.title("📰 Real vs Fake News Analyzer")
 
-st.markdown("""
-    <style>
-    .stApp {
-        background: linear-gradient(135deg, #ff0000, #ffffff);
-        color: #000;
-    }
-    .main > div {
-        background-color: #f1f1f1;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    h1, h2, h3, .css-1v0mbdj, .st-bx {
-        color: #3C3B6E !important;
-    }
-    .st-bx {
-        background-color: #B22234 !important;
-        border-radius: 8px;
-        padding: 10px;
-        color: white;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
 @st.cache_data
 def load_data():
     true_df = pd.read_csv("True.csv")
@@ -78,20 +54,6 @@ def train_model(df):
     model.fit(X_train, y_train)
     return model, vectorizer, X_test, y_test
 
-# Main UI
-st.markdown("""
-    <style>
-    .stApp {
-        background-color: #f8f9fa;
-    }
-    .css-1v0mbdj {
-        color: #B22234; /* red */
-    }
-    .st-bx {
-        background-color: #3C3B6E; /* navy */
-    }
-    </style>
-""", unsafe_allow_html=True)
 
 tab = st.sidebar.radio("Choose Activity", ["📊 Explore Data", "🤖 Train & Predict", "📝 Try Your Own"])
 
