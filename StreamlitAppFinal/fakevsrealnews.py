@@ -23,6 +23,12 @@ st.set_page_config(page_title="Fake News Analyzer", layout="wide")
 
 st.title("📰 Real vs Fake News Analyzer")
 
+# ---- File Check ----
+if not os.path.exists("True.csv") or not os.path.exists("Fake.csv"):
+    st.error("Missing data files: 'True.csv' or 'Fake.csv'")
+    st.stop()
+
+# ---- Data Loading ----
 @st.cache_data
 def load_data():
     true_df = pd.read_csv("True.csv")
@@ -33,15 +39,15 @@ def load_data():
     df.dropna(subset=["title", "text", "label"], inplace=True)
     return df
 
-@st.cache_resource
+# ---- Text Cleaning ----
 def clean_text(text):
     text = text.lower()
     text = re.sub(r"http\S+|www\S+|https\S+", '', text, flags=re.MULTILINE)
-    text = re.sub(r'\@w+|\#','', text)
+    text = re.sub(r'\@w+|\#', '', text)
     text = re.sub(r'[^\w\s]', '', text)
     return text
 
-@st.cache_resource
+# ---- Model Training ----
 def train_model(df):
     df['content'] = df['title'] + ' ' + df['text']
     df['content'] = df['content'].apply(clean_text)
@@ -54,10 +60,12 @@ def train_model(df):
     model.fit(X_train, y_train)
     return model, vectorizer, X_test, y_test
 
+# ---- Sidebar ----
 tab = st.sidebar.radio("Choose Activity", ["📊 Explore Data", "🤖 Train & Predict", "📝 Try Your Own"])
 
 df = load_data()
 
+# ---- Tab: Explore Data ----
 if tab == "📊 Explore Data":
     st.subheader("Class Distribution")
 
@@ -65,7 +73,7 @@ if tab == "📊 Explore Data":
     total = class_counts.sum()
     for label, count in class_counts.items():
         percent = (count / total) * 100
-        st.write(f"**{label}**: {count} samples ({percent:.2f}%)")
+        st.write(f"**{label}**: {count} samplpercent:.2f}%)")
 
     fig, ax = plt.subplots()
     sns.countplot(data=df, x='label', ax=ax, palette=['#B22234', '#3C3B6E'])
@@ -76,7 +84,7 @@ if tab == "📊 Explore Data":
     pie_sizes = class_counts.values
     fig2, ax2 = plt.subplots()
     ax2.pie(pie_sizes, labels=pie_labels, autopct='%1.1f%%', colors=['#B22234', '#3C3B6E'], startangle=90)
-    ax2.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    ax2.axis('equal')
     st.pyplot(fig2)
 
     st.subheader("WordCloud")
@@ -85,17 +93,21 @@ if tab == "📊 Explore Data":
     wc = WordCloud(width=800, height=400, background_color="white", colormap='coolwarm').generate(text)
     st.image(wc.to_array(), use_column_width=True)
 
+# ---- Tab: Train & Predict ----
 elif tab == "🤖 Train & Predict":
     st.subheader("Model Training & Evaluation")
-    model, vectorizer, X_test, y_test = train_model(df)
-    y_pred = model.predict(X_test)
-    st.text("Classification Report:")
-    st.text(classification_report(y_test, y_pred))
-    st.success("Model trained successfully!")
+    with st.spinner("Training model..."):
+        model, vectorizer, X_test, y_test = train_model(df)
+        y_pred = model.predict(X_test)
+        st.text("Classification Report:")
+        st.text(classification_report(y_test, y_pred))
+        st.success("Model trained successfully!")
 
+# ---- Tab: Try Your Own ----
 elif tab == "📝 Try Your Own":
     st.subheader("Test a News Article")
-    model, vectorizer, _, _ = train_model(df)
+    with st.spinner("Training model..."):
+        model, vectorizer, _, _ = train_model(df)
 
     example_real_titles = df[df['label'] == "REAL"]['title'].dropna().tolist()
     random_title = random.choice(example_real_titles)
@@ -107,6 +119,6 @@ elif tab == "📝 Try Your Own":
             cleaned = clean_text(user_input)
             vec = vectorizer.transform([cleaned])
             pred = model.predict(vec)[0]
-            st.markdown(f"<div class='st-bx'>{'🟢 Real News' if pred == 1 else '🔴 Fake News'}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='st-bx'>{'🟢 Real News' if pred == 1 else '🔴 Fake News'}</div>", unsafe_allow_=True)
         else:
             st.warning("Please enter some text.")
