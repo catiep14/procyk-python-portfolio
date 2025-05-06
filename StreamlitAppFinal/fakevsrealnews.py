@@ -54,7 +54,6 @@ def train_model(df):
     model.fit(X_train, y_train)
     return model, vectorizer, X_test, y_test
 
-
 tab = st.sidebar.radio("Choose Activity", ["📊 Explore Data", "🤖 Train & Predict", "📝 Try Your Own"])
 
 df = load_data()
