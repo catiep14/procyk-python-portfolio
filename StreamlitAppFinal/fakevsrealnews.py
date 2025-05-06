@@ -29,6 +29,15 @@ st.markdown("""
         background: linear-gradient(135deg, #ff0000, #ffffff);
         color: #000;
     }
+    .main > div {
+        background-color: #f1f1f1;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3, .css-1v0mbdj, .st-bx {
+        color: #3C3B6E !important;
+    }
     .st-bx {
         background-color: #B22234 !important;
         border-radius: 8px;
