@@ -73,7 +73,7 @@ if tab == "📊 Explore Data":
     total = class_counts.sum()
     for label, count in class_counts.items():
         percent = (count / total) * 100
-        st.write(f"**{label}**: {count} samplpercent:.2f}%)")
+        st.write(f"**{label}**: {count} samples ({percent:.2f}%)")
 
     fig, ax = plt.subplots()
     sns.countplot(data=df, x='label', ax=ax, palette=['#B22234', '#3C3B6E'])
