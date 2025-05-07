@@ -13,11 +13,6 @@ import re
 import random
 import os
 
-DEBUG = True
-
-if DEBUG:
-    print("Current working directory:", os.getcwd())
-    print("Files in current directory:", os.listdir())
 
 st.set_page_config(page_title="Fake News Analyzer", layout="wide")
 
