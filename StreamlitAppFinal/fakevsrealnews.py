@@ -11,8 +11,9 @@ from sklearn.metrics import classification_report
 import string
 import re
 import random
-import os
 
+import os
+print(os.listdir())
 st.set_page_config(page_title="Fake News Analyzer", layout="wide")
 
 st.title("📰 Real vs Fake News Analyzer")
