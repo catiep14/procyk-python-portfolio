@@ -101,6 +101,8 @@ streamlit run app.py
 
 ### Prediction Output
 <img width="712" alt="Screenshot 2025-05-07 at 3 06 40 PM" src="https://github.com/user-attachments/assets/8eca8341-001a-4f9a-9444-2176e0fac013" />
+<img width="731" alt="Screenshot 2025-05-07 at 3 37 05 PM" src="https://github.com/user-attachments/assets/4c103a19-a389-4b6e-afcf-524955935c7e" />
+<img width="709" alt="Screenshot 2025-05-07 at 3 37 23 PM" src="https://github.com/user-attachments/assets/cde4e3b4-120c-4b48-8a13-cc9678f52d3c" />
 
 
 ---
