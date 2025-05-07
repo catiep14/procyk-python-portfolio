@@ -13,7 +13,7 @@ import re
 import random
 import os
 
-DEBUG = False 
+DEBUG = True
 
 if DEBUG:
     print("Current working directory:", os.getcwd())
