@@ -5,6 +5,8 @@
 
 Fake news is a major issue in today's information ecosystem, spreading rapidly through social media and online platforms. This Streamlit app provides an interactive way to explore and analyze fake vs. real news articles using Natural Language Processing (NLP) and machine learning.
 
+Post graduation, I will work in the public relations field, so media is a vital piece to how that industry functions
+
 By training a model on labeled news datasets, users can:
 - Explore real vs. fake news samples
 - Train a classification model
@@ -84,14 +86,22 @@ streamlit run app.py
 ## 🖼️ Visual Examples
 
 ### Class Distribution (Bar + Pie Chart)
-![Bar Chart](screenshots/bar_chart.png)
-![Pie Chart](screenshots/pie_chart.png)
+<img width="671" alt="Screenshot 2025-05-07 at 3 15 22 PM" src="https://github.com/user-attachments/assets/81f33d49-cc37-47ee-8a33-de4971f903b0" />
+
+<img width="646" alt="Screenshot 2025-05-07 at 3 18 54 PM" src="https://github.com/user-attachments/assets/daae390c-0f62-4e09-8523-fc1dae2c8562" />
+
 
 ### Word Cloud Example
-![WordCloud](screenshots/wordcloud_real.png)
+<img width="661" alt="Screenshot 2025-05-07 at 3 06 32 PM" src="https://github.com/user-attachments/assets/afef538c-779e-4675-9d2d-7d90e87e123f" />
+<img width="651" alt="Screenshot 2025-05-07 at 3 06 25 PM" src="https://github.com/user-attachments/assets/cfe1d03f-4156-422c-8713-a689082bd151" />
+
+### Training model 
+<img width="669" alt="Screenshot 2025-05-07 at 3 06 52 PM" src="https://github.com/user-attachments/assets/1364cb0f-1a91-4720-99bb-3653183f157f" />
+
 
 ### Prediction Output
-![Prediction](screenshots/prediction_real.png)
+<img width="712" alt="Screenshot 2025-05-07 at 3 06 40 PM" src="https://github.com/user-attachments/assets/8eca8341-001a-4f9a-9444-2176e0fac013" />
+
 
 ---
 
