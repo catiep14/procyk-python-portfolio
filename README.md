@@ -5,6 +5,37 @@ This repository serves as a showcase for my Python projects, highlighting my ski
 
 ## This Portfolio is structured based on each project, with README files explaining each of them further. 
 ---
+```
+# 🏅 Tidy Data Project — 2008 Olympics Medalists  
+🔗 View Tidy Olympics App Repository
+
+This project is a data cleaning and visualization web app that transforms the 2008 Olympics medalist dataset using tidy data principles. Built with Python and Streamlit, the app makes messy, raw data accessible for meaningful analysis and interactive exploration.
+
+---
+
+### 🌟 Why This Project Matters
+
+This Tidy Data App demonstrates my ability to:
+
+- Apply **tidy data** principles to restructure real-world datasets
+- Build intuitive dashboards using **Streamlit**
+- Work with **pandas** to perform advanced data wrangling and reshaping
+- Visualize structured data through **bar charts**, **pie charts**, and **filterable tables**
+- Present insights in a clean, interactive format for non-technical users
+
+---
+
+### 🧰 How It Fits into My Portfolio
+
+This project highlights my growing proficiency in:
+
+- **Data cleaning and transformation** using Python and pandas
+- Building **domain-specific dashboards** to explore structured data
+- Applying **best practices in data formatting** (1 variable = 1 column, 1 observation = 1 row)
+- Making raw datasets actionable for visual analytics and storytelling
+
+It complements other projects in my portfolio by showing how I can take **messy, untidy data** and turn it into **clean, insightful visualizations** that make complex patterns easy to understand.
+```
 
 ---
 ## 🧙‍♂️ Custom Named Entity Recognition (NER) App — Harry Potter Edition
