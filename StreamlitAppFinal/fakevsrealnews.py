@@ -19,9 +19,26 @@ st.set_page_config(page_title="Fake News Analyzer", layout="wide")
 st.title("📰 Real vs Fake News Analyzer")
 
 # ---- File Check ----
+# ---- File Check and Upload Option ----
+data_missing = False
 if not os.path.exists("True_sample.csv") or not os.path.exists("Fake_sample.csv"):
-    st.error("Required data files ('True_sample.csv' or 'Fake_sample.csv') are missing. Please upload them to continue.")
-    st.stop()
+    st.warning("Required data files ('True_sample.csv' or 'Fake_sample.csv') are missing. Please upload them below.")
+    data_missing = True
+
+    true_file = st.file_uploader("Upload True_sample.csv", type="csv")
+    fake_file = st.file_uploader("Upload Fake_sample.csv", type="csv")
+
+    if true_file and fake_file:
+        # Save uploaded files
+        with open("True_sample.csv", "wb") as f:
+            f.write(true_file.getbuffer())
+        with open("Fake_sample.csv", "wb") as f:
+            f.write(fake_file.getbuffer())
+        st.success("Files uploaded and saved successfully. Please rerun the app.")
+        st.stop()
+    else:
+        st.stop()
+
 
 # ---- Data Loading ----
 @st.cache_data
