@@ -12,7 +12,7 @@ import string
 import re
 import random
 import os
-
+import zipfile
 
 st.set_page_config(page_title="Fake News Analyzer", layout="wide")
 
