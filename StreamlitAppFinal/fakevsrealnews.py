@@ -113,6 +113,7 @@ elif tab == "📝 Try Your Own":
             cleaned = clean_text(user_input)
             vec = vectorizer.transform([cleaned])
             pred = model.predict(vec)[0]
-            st.markdown(f"<div class='st-bx'>{'🟢 Real News' if pred == 1 else '🔴 Fake News'}</div>", unsafe_allow_=True)
+            st.markdown(f"<div class='st-bx'>{'🟢 Real News' if pred == 1 else '🔴 Fake News'}</div>", unsafe_allow_html=True)
         else:
             st.warning("Please enter some text.")
+
