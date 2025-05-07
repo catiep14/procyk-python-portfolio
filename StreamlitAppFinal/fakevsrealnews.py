@@ -12,33 +12,14 @@ import string
 import re
 import random
 import os
-import zipfile
-# ---- Sample File Generator (only runs if files are missing) ----
-def create_sample_data():
-    import pandas as pd
 
-    true_data = {
-        "title": ["Real News Title 1", "Real News Title 2"],
-        "text": ["This is a real news article.", "Another piece of real news."]
-    }
-    fake_data = {
-        "title": ["Fake News Title 1", "Fake News Title 2"],
-        "text": ["This is fake news content.", "Another fake article."]
-    }
-    pd.DataFrame(true_data).to_csv("True_sample.csv", index=False)
-    pd.DataFrame(fake_data).to_csv("Fake_sample.csv", index=False)
-
-# Auto-generate data if files are missing
-if not os.path.exists("True_sample.csv") or not os.path.exists("Fake_sample.csv"):
-    create_sample_data()
 st.set_page_config(page_title="Fake News Analyzer", layout="wide")
 
 st.title("📰 Real vs Fake News Analyzer")
 
 # ---- File Check ----
-# You can still keep this if you want to make sure files now exist
 if not os.path.exists("True_sample.csv") or not os.path.exists("Fake_sample.csv"):
-    st.error("Failed to create required CSV files.")
+    st.error("Required data files ('True_sample.csv' or 'Fake_sample.csv') are missing. Please upload them to continue.")
     st.stop()
 
 # ---- Data Loading ----
