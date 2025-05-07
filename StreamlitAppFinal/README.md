@@ -5,6 +5,8 @@
 
 Fake news is a major issue in today's information ecosystem, spreading rapidly through social media and online platforms. This Streamlit app provides an interactive way to explore and analyze fake vs. real news articles using Natural Language Processing (NLP) and machine learning.
 
+Post graduation, I will work in the public relations field, so media is a vital piece to how that industry functions
+
 By training a model on labeled news datasets, users can:
 - Explore real vs. fake news samples
 - Train a classification model
