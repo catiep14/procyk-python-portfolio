@@ -26,8 +26,8 @@ if not os.path.exists("True.csv") or not os.path.exists("Fake.csv"):
 # ---- Data Loading ----
 @st.cache_data
 def load_data():
-    true_df = pd.read_csv("True_sample.csv")
-    fake_df = pd.read_csv("Fake_sample.csv")
+    true_df = pd.read_csv("True.csv")
+    fake_df = pd.read_csv("Fake.csv")
     true_df["label"] = "REAL"
     fake_df["label"] = "FAKE"
     df = pd.concat([true_df, fake_df], ignore_index=True)
