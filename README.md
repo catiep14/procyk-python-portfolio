@@ -3,23 +3,11 @@
 ## Purpose of This Repository
 This repository serves as a showcase for my Python projects, highlighting my skills in data analysis, visualization, machine learning, and software development. It is designed to reflect my growth as a Python programmer and provide a structured, professional portfolio for potential employers or collaborators to explore.
 
-## Repository Organization Plan
-I plan to structure my porfolio like this:
-
-- **Exploratory Data Analysis (EDA):**
-  - Notebooks and scripts focused on exploratory insights.
-
-- **Visualizations:**
-  - Projects showcasing data visualization.
-
-- **Project-Specific Folders:**
-  - Each major project will have its own folder, including a README file explaining the project’s purpose, datasets, methods, and results.
+## This Portfolio is structured based on each project, with README files explaining each of them further. 
 ---
 
 ---
 ## 🧙‍♂️ Custom Named Entity Recognition (NER) App — Harry Potter Edition
-
-🔗 [View NER App Repository](https://github.com/your-username/NERStreamlitApp)
 
 This project is a fun and interactive web app that explores **Named Entity Recognition (NER)** using spaCy and Streamlit, themed around the **Harry Potter universe**. Users can enter or upload text, then choose from predefined custom entity types like `CHARACTER`, `SPELL`, `HOUSE`, and more. The app uses spaCy’s `EntityRuler` to apply these custom patterns and visually highlight detected entities in the text.
 
