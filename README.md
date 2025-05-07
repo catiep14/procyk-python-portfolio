@@ -14,6 +14,7 @@ I plan to structure my porfolio like this:
 
 - **Project-Specific Folders:**
   - Each major project will have its own folder, including a README file explaining the project’s purpose, datasets, methods, and results.
+---
 
 ---
 ## 🧙‍♂️ Custom Named Entity Recognition (NER) App — Harry Potter Edition
@@ -33,3 +34,36 @@ This NER App demonstrates my ability to:
 ### 🧰 How It Fits into My Portfolio
 
 This project showcases my growing skills in **data processing**, **app development**, and **creative problem-solving**. It complements other projects in this portfolio by highlighting my ability to work with **unstructured text data**, develop **usable tools for niche audiences**, and incorporate **playful design** into functional applications.
+---
+```
+# 📰 Fake News Classifier App — Real vs. Fake News Detection  
+🔗 View Fake News App Repository
+
+This project is an interactive Streamlit web app that analyzes news articles to determine whether they are **real** or **fake**, using NLP techniques and a logistic regression classifier trained on real-world data. It’s designed to make fake news detection intuitive and accessible for users, with tools to explore, train, and test fake news models in real time.
+
+---
+
+### 🌟 Why This Project Matters
+
+This Fake News Analyzer demonstrates my ability to:
+
+- Work with natural language processing (NLP) libraries like **scikit-learn** and **TfidfVectorizer**
+- Build interactive web apps using **Streamlit**
+- Implement real-world classification models using logistic regression
+- Handle data ingestion, cleaning, model training, and prediction in an end-to-end pipeline
+- Design informative visualizations like bar charts, pie charts, and word clouds to communicate insights
+
+---
+
+### 🧰 How It Fits into My Portfolio
+
+This project highlights my growing proficiency in:
+
+- **Applied machine learning** on real datasets
+- Developing **data-centric tools** that are both functional and user-friendly
+- **Creating intuitive user experiences** around serious topics like misinformation
+- Applying best practices in Python development, from modular code to data validation and user feedback
+
+It complements other projects in my portfolio by showing how I can handle **unstructured text data**, deploy **interactive ML apps**, and communicate results clearly through visual storytelling.
+```
+
