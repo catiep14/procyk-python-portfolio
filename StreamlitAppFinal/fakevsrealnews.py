@@ -14,6 +14,9 @@ import random
 import os
 import zipfile
 
+true_df = pd.read_csv("True_sample.csv")
+fake_df = pd.read_csv("Fake_sample.csv")
+
 st.set_page_config(page_title="Fake News Analyzer", layout="wide")
 
 st.title("📰 Real vs Fake News Analyzer")
