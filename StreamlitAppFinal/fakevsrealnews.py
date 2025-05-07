@@ -19,8 +19,8 @@ st.set_page_config(page_title="Fake News Analyzer", layout="wide")
 st.title("📰 Real vs Fake News Analyzer")
 
 # ---- File Check ----
-if not os.path.exists("True.csv") or not os.path.exists("Fake.csv"):
-    st.error("Missing data files: 'True.csv' or 'Fake.csv'")
+if not os.path.exists("True_sample.csv") or not os.path.exists("Fake_sample.csv"):
+    st.error("Missing data files: 'True_sample.csv' or 'Fake_sample.csv'")
     st.stop()
 
 # ---- Data Loading ----
